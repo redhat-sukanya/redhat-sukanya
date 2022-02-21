@@ -9,4 +9,5 @@ dest_path:Local File path
 Replace the file_id & dest_path in main.py 
 
  
-
+Step 3:
+Run Main.py from cmd prompt
