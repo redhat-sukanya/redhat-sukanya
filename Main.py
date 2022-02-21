@@ -1,5 +1,4 @@
 from google_drive_downloader import GoogleDriveDownloader as gdd
 
-gdd.download_file_from_google_drive(file_id='1iytA1n2z4go3uVCwE__vIKouTKyIDjEq',
-                                    dest_path='./data/mnist.zip',
-                                    unzip=True)
+gdd.download_file_from_google_drive(file_id='1pOHopOLujBEvc8JvXjuPWyLbSacJBqsU',
+                                    dest_path='C:\Users\singhsuk\Downloads')
