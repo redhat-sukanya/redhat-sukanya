@@ -10,7 +10,7 @@ from os.path import exists
 
 class GoogleDriveDownloader:
     """
-    Minimal class to download shared files from Google Drive.
+    Program to  download shared files from Google Drive.
     """
 
     CHUNK_SIZE = 32768
@@ -29,16 +29,6 @@ class GoogleDriveDownloader:
         dest_path: str
             the destination where to save the downloaded file.
             Must be a path (for example: './downloaded_file.txt')
-        overwrite: bool
-            optional, if True forces re-download and overwrite.
-        unzip: bool
-            optional, if True unzips a file.
-            If the file is not a zip file, ignores it.
-        showsize: bool
-            optional, if True print the current download size.
-        Returns
-        -------
-        None
         """
 
         destination_directory = dirname(dest_path)
@@ -94,11 +84,4 @@ class GoogleDriveDownloader:
                         stdout.flush()
                         current_size[0] += GoogleDriveDownloader.CHUNK_SIZE
 
-    # From https://stackoverflow.com/questions/1094841/reusable-library-to-get-human-readable-version-of-file-size
-    @staticmethod
-    def sizeof_fmt(num, suffix='B'):
-        for unit in ['', 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi']:
-            if abs(num) < 1024.0:
-                return '{:.1f} {}{}'.format(num, unit, suffix)
-            num /= 1024.0
-        return '{:.1f} {}{}'.format(num, 'Yi', suffix)
+   
